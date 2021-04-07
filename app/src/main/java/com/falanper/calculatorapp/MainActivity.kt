@@ -41,20 +41,16 @@ class MainActivity : AppCompatActivity() {
                 editText.setText("")
             }
             R.id.button_plus -> {
-                setNumber1()
-                isPlus = true
+                plus()
             }
             R.id.button_minus -> {
-                setNumber1()
-                isMinus = true
+                minus()
             }
             R.id.button_multiplication -> {
-                setNumber1()
-                isMultiplication = true
+                multiplication()
             }
             R.id.button_division -> {
-                setNumber1()
-                isDivision = true
+                division()
             }
             R.id.button_equals -> {
                 var result = 0.0f
@@ -90,5 +86,29 @@ class MainActivity : AppCompatActivity() {
     private fun setNumber1() {
         number1 = editText.text.toString().toFloat()
         editText.setText("")
+    }
+
+    private fun plus() {
+        number1 = editText.text.toString().toFloat()
+        editText.setText("")
+        isPlus = true
+    }
+
+    private fun minus() {
+        number1 = editText.text.toString().toFloat()
+        editText.setText("")
+        isMinus = true
+    }
+
+    private fun multiplication() {
+        number1 = editText.text.toString().toFloat()
+        editText.setText("")
+        isMultiplication = true
+    }
+
+    private fun division() {
+        number1 = editText.text.toString().toFloat()
+        editText.setText("")
+        isDivision = true
     }
 }
